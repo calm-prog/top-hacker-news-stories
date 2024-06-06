@@ -23,7 +23,7 @@ export const getTopStories = async (): Promise<
 };
 
 // For the sake of simplicity only required properties are typed
-interface TopStoryDetails {
+export interface TopStoryDetails {
   by?: string;
   id: number;
   score?: number;
@@ -38,7 +38,7 @@ export const getTopStoryDetails = async (
   return fetchData(getUrlForPath(`/item/${itemId}`));
 };
 
-interface User {
+export interface User {
   id: string;
   karma: number;
 }
