@@ -1,9 +1,11 @@
-import { TopStoryDetails, User } from '@/client';
+import { FilteredTopStory } from '@/app/page';
+import { User } from '@/client';
 
 type ArticleProps = Pick<
-  TopStoryDetails,
+  FilteredTopStory,
   'by' | 'score' | 'time' | 'title' | 'url'
-> & { karma: User['karma'] | undefined };
+> &
+  Pick<User, 'karma'>;
 
 export const Article = ({
   by,
@@ -15,39 +17,31 @@ export const Article = ({
 }: ArticleProps): JSX.Element => {
   return (
     <article>
-      {title && (
-        <header>
-          <h2>{title}</h2>
-        </header>
-      )}
+      <header>
+        <h2>{title}</h2>
+      </header>
       <div>
-        {score && <div>Score: {score}</div>}
-        {time && (
-          <time
-            dateTime={new Date(
-              time * 1000
-            ).toLocaleDateString()}
-          >
-            Created at:{' '}
-            {new Date(time * 1000).toLocaleDateString()}
-          </time>
-        )}
-      </div>
-      {by && (
-        <div>
-          <div>Author: {by}</div>
-          <div>Karma: {karma}</div>
-        </div>
-      )}
-      {url && (
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <div>Score: {score}</div>
+        <time
+          dateTime={new Date(
+            time * 1000
+          ).toLocaleDateString()}
         >
-          See article
-        </a>
-      )}
+          Created at:{' '}
+          {new Date(time * 1000).toLocaleDateString()}
+        </time>
+      </div>
+      <div>
+        <div>Author: {by}</div>
+        <div>Karma: {karma}</div>
+      </div>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        See article
+      </a>
     </article>
   );
 };
