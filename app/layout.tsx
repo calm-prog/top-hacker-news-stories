@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from 'next/font/google'
-import "./globals.css";
+import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Top Hacker News",

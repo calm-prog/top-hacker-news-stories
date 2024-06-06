@@ -6,7 +6,7 @@ import {
 } from '@/client';
 import { shuffleArray } from '@/utilities/shuffleArray';
 import { Article } from '@/components/Article';
-import styles from './page.module.css';
+import styles from './page.module.scss';
 
 const REQUIRED_PROPERTIES = [
   'by',
