@@ -22,7 +22,7 @@ export const getTopStories = async (): Promise<
   return fetchData(getUrlForPath('/topstories'));
 };
 
-// For the sake of simplicity only required properties are typed
+// For the sake of simplicity only task-required properties are typed
 export interface TopStoryDetails {
   by?: string;
   id: number;
