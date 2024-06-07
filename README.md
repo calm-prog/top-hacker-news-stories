@@ -1,7 +1,9 @@
-## Getting Started
+## How to run the app
 
-1. `npm install`
+1. Download the project from the `main` branch
 
-2. `npm run dev`
+2. At the root directory run `npm install`
 
-3. Access the app on `http://localhost:3000`
+3. In the same directory run `npm run dev`
+
+4. Access the app on `http://localhost:3000`
