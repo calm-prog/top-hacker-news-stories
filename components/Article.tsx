@@ -43,7 +43,7 @@ export const Article = ({
           </a>
         </div>
         <div className={styles.authorInfo}>
-          <div className={styles.user}>
+          <div className={styles.author}>
             <Image
               src="/programmer-svgrepo-com.svg"
               width={75}
