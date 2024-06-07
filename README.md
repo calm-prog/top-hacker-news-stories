@@ -2,7 +2,7 @@
 
 1. Download the project from the `main` branch
 
-2. At the root directory run `npm install`
+2. At the root directory run `npm install` in a terminal 
 
 3. In the same directory run `npm run dev`
 
