@@ -6,7 +6,7 @@ import {
 } from '@/client';
 import { shuffleArray } from '@/utilities/shuffleArray';
 import { Article } from '@/components/Article';
-import styles from './page.module.css';
+import styles from './page.module.scss';
 
 const REQUIRED_PROPERTIES = [
   'by',
@@ -56,9 +56,11 @@ export default async function Home() {
   );
 
   return (
-    <main>
-      <h1>10 of the hottest Hacker News stories</h1>
-      <section>
+    <main className={styles.main}>
+      <h1 className={styles.h1}>
+        10 of the hottest Hacker News stories
+      </h1>
+      <section className={styles.articleSection}>
         {listOfStoryDetails
           .toSorted((a, b) => a.score - b.score)
           .map((storyDetails) => (

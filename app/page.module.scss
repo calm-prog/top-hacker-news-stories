@@ -1,0 +1,29 @@
+@mixin flex-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.main {
+  @include flex-stack();
+  max-width: 800px;
+  margin: 0 auto;
+  padding-block: 2rem;
+}
+
+.articleSection {
+  @include flex-stack();
+  max-width: 100%;
+}
+
+.h1 {
+  background: #23a7be;
+  background: linear-gradient(
+    to right,
+    #23a7be 0%,
+    #c83737 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
