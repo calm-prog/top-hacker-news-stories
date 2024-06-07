@@ -56,9 +56,11 @@ export default async function Home() {
   );
 
   return (
-    <main>
-      <h1>10 of the hottest Hacker News stories</h1>
-      <section>
+    <main className={styles.main}>
+      <h1 className={styles.h1}>
+        10 of the hottest Hacker News stories
+      </h1>
+      <section className={styles.articleSection}>
         {listOfStoryDetails
           .toSorted((a, b) => a.score - b.score)
           .map((storyDetails) => (
