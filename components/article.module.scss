@@ -12,6 +12,7 @@ $layout-breakpoint-small: 576px;
 }
 
 .h2 {
+  padding-inline: 1rem;
   font-weight: 200;
   text-transform: uppercase;
   font-size: 1rem;
@@ -23,18 +24,21 @@ $layout-breakpoint-small: 576px;
 
 .articleContent {
   display: grid;
-  height: 230px;
+  height: 300px;
 }
 
 .articleInfo {
   @include grid-center();
-  border-right: solid;
   border-top: solid;
 }
 
 .authorInfo {
   @include grid-center();
   border-top: solid;
+}
+
+.author {
+  @include grid-center();
 }
 
 @media (min-width: $layout-breakpoint-small) {
@@ -47,6 +51,7 @@ $layout-breakpoint-small: 576px;
 
   .articleContent {
     grid-auto-flow: column;
+    height: 230px;
   }
 
   .articleInfo {
